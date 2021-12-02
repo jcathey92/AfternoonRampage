@@ -25,3 +25,4 @@ const GIFT_PS: PackedScene = preload("res://Gift/Gift.tscn")
 
 func TestPrint(message: String):
 	print(message)
+
