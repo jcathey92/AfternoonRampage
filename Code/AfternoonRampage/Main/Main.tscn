@@ -22,6 +22,5 @@ position = Vector2( 508.739, 283.822 )
 
 [node name="Gift" parent="YSort" instance=ExtResource( 4 )]
 position = Vector2( 393.346, 282.625 )
-gravity_scale = 0.0
 linear_damp = 50.0
 angular_damp = 50.0
