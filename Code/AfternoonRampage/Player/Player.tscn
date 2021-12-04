@@ -1,10 +1,11 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
-[ext_resource path="res://Main/icon.png" type="Texture" id=2]
+[ext_resource path="res://Player/PlayerSprite.png" type="Texture" id=2]
 
-[sub_resource type="CircleShape2D" id=1]
-radius = 31.5022
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 12.3512
+height = 20.9495
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
@@ -13,4 +14,5 @@ script = ExtResource( 1 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.0708618, 9.01031 )
 shape = SubResource( 1 )

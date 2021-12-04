@@ -11,10 +11,10 @@
 #   the delivery point.
 #
 # MAIN CLASSES
-# - Player
-# - Gift
-# - DeliveryPoint
-# - Obstacle
+# - Player Nodes: KinematicBody2D/ColisionShape|Node2D(Inventory)|Sprite 
+# - Gift Nodes: Area2D/ColisionShape|Sprite
+# - DeliveryPoint Nodes: Area2D/ColisionShape|Sprite
+# - Obstacle Nodes: (Static or Rigid)Body|Sprite
 #==============================================================================
 
 extends Node
