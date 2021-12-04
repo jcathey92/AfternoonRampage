@@ -17,8 +17,10 @@ position = Vector2( 508.739, 283.822 )
 
 [node name="Gift" parent="YSort" instance=ExtResource( 4 )]
 position = Vector2( 393.346, 282.625 )
-gravity_scale = 0.0
 linear_damp = 50.0
 angular_damp = 50.0
 
-[node name="StaticBody2D" type="StaticBody2D" parent="YSort"]
+[node name="BoundingBox" type="StaticBody2D" parent="YSort"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="YSort/BoundingBox"]
+polygon = PoolVector2Array( 0, 0, 1024, 0, 1024, 600, 0, 600, 0, 0, -30, 0, -30, 630, 1054, 630, 1054, -30, 0, -30 )
