@@ -22,6 +22,14 @@ extends Node
 const PLAYER_PS: PackedScene = preload("res://Player/Player.tscn")
 const GIFT_PS: PackedScene = preload("res://Gift/Gift.tscn")
 
+func _ready():
+	randomize()
 
 func TestPrint(message: String):
 	print(message)
+
+#Debug Restarts Game
+func _unhandled_input(_event):
+	if Input.is_action_just_pressed("ui_home"):
+		var currentScene = get_tree().get_current_scene().get_filename()
+		get_tree().change_scene(currentScene)

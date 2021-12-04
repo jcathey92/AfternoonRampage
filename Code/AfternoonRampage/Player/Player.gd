@@ -14,8 +14,12 @@ func _physics_process(delta):
 # Movement
 	velocity = move_and_slide(velocity.move_toward(input_vector * speed, speed * acceleration * delta))
 #Debug
-	if Input.is_action_just_pressed("ui_accept"):
-		print(Inventory)
-func pick_up_gift(gift_type):
+	if Input.is_action_just_pressed("ui_accept"):#Press enter to print
+		print("Inventory:" + String(Inventory))#Prints Inventory
+
+func pick_up_gift(gift):
 	if Inventory.size() <= 0:
-		Inventory.append(gift_type)
+		Inventory.append(gift)
+
+func drop_off_gift():
+	Inventory.clear()
