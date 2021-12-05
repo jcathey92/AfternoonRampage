@@ -21,7 +21,7 @@ extends Node
 
 const PLAYER_PS: PackedScene = preload("res://Player/Player.tscn")
 const GIFT_PS: PackedScene = preload("res://Gift/Gift.tscn")
-
+const OBSTACLE_PS: PackedScene = preload("res://Obstacle/Obstacle.tscn")
 
 func TestPrint(message: String):
-	print(message)
+    print(message)
