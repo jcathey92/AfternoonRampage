@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GiftSprite.png-6f7dabe8aeeb0d45788231811aebb661.stex"
+path="res://.import/RubberDuckyGiftSprite.png-63b2e1cd7389f3dd4f715a4d0866b9b7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Gift/GiftSprite.png"
-dest_files=[ "res://.import/GiftSprite.png-6f7dabe8aeeb0d45788231811aebb661.stex" ]
+source_file="res://Gift/RubberDuckyGiftSprite.png"
+dest_files=[ "res://.import/RubberDuckyGiftSprite.png-63b2e1cd7389f3dd4f715a4d0866b9b7.stex" ]
 
 [params]
 

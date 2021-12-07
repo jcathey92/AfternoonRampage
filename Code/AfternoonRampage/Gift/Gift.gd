@@ -4,34 +4,34 @@ class_name Gift
 var picker: int
 export var gift_type: int
 var gift: String
-onready var GiftSprite: Sprite = $Sprite
+onready var GiftSprite: AnimatedSprite = $AnimatedSprite
 
 #Gift Types :Placeholder: The Colors and Sprites are just for testing purposes for right now:
 enum{
-	Green,
-	Yellow,
-	Purple 
+	Necklace,
+	Duck,
+	Cake 
 }
 
 func _ready():
 	# Random picks type of gift
 	picker = round(rand_range(0,2))
 	if picker == 0:
-		gift_type = Green
+		gift_type = Necklace
 	elif picker == 1 :
-		gift_type = Yellow
+		gift_type = Duck
 	else:
-		gift_type = Purple
+		gift_type = Cake
 	# Sets Gift Properties
 	match gift_type:
-		Green:
-			gift = "Green"
+		Necklace:
+			gift = "Necklace"
 			GiftSprite.frame = 0
-		Yellow:
-			gift = "Yello"
+		Duck:
+			gift = "Duck"
 			GiftSprite.frame = 1
-		Purple:
-			gift = "Purple"
+		Cake:
+			gift = "Cake"
 			GiftSprite.frame = 2
 
 func _on_Gift_body_entered(body):

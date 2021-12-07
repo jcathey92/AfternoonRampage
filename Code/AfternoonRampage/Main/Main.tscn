@@ -34,3 +34,5 @@ position = Vector2( 216.419, 434 )
 
 [node name="DeliveryBox" parent="." instance=ExtResource( 5 )]
 position = Vector2( 842.441, 310.664 )
+
+[editable path="YSort/Gift2"]
