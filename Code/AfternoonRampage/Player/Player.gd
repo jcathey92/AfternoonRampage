@@ -8,6 +8,8 @@ var       velocity: Vector2 = Vector2.ZERO # Movement Calcuation
 export var   speed: float = 300            # Top speed for player movement
 var   acceleration: float = 5 
 var   deceleration: float = 2.5 
+onready var  sprite: AnimatedSprite = $AnimatedSprite
+var invetory: int = 4
 #Functions
 func _physics_process(delta):
 	# Getting Input
@@ -18,3 +20,8 @@ func _physics_process(delta):
 	else:
 		velocity = velocity.move_toward(Vector2.ZERO,speed * deceleration * delta)
 	velocity = move_and_slide(velocity)
+	sprite.frame = invetory
+func pickup(gift):
+	invetory = gift
+func dropoff():
+	invetory = 4
