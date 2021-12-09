@@ -6,7 +6,7 @@
 [ext_resource path="res://Gift/Gift.tscn" type="PackedScene" id=4]
 [ext_resource path="res://DeliveryBox/DeliveryBox.tscn" type="PackedScene" id=5]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node"]
 script = ExtResource( 2 )
 
 [node name="YSort" type="YSort" parent="."]
@@ -15,27 +15,27 @@ script = ExtResource( 2 )
 position = Vector2( 508.739, 283.822 )
 
 [node name="Obstacle" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( 318.13, 357.818 )
+position = Vector2( 608.423, 276.239 )
 
 [node name="Gift" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 488.755, 215.277 )
+position = Vector2( 642.377, 458.953 )
 linear_damp = 50.0
 angular_damp = 50.0
 
 [node name="Gift2" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 174.466, 114.256 )
+position = Vector2( 234.855, 440.571 )
 linear_damp = 50.0
 angular_damp = 50.0
 gift = 1
 
 [node name="Gift3" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 623.451, 73.8471 )
+position = Vector2( 652.056, 108.809 )
 linear_damp = 50.0
 angular_damp = 50.0
 gift = 2
 
 [node name="Gift4" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 352.937, 105.276 )
+position = Vector2( 232.158, 101.038 )
 linear_damp = 50.0
 angular_damp = 50.0
 gift = 3
