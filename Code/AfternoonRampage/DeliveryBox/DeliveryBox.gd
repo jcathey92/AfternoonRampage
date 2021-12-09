@@ -28,12 +28,15 @@ func _process(delta):
 
 func _on_DeliveryBox_body_entered(body):
 	if body is Player:
-		if body.invetory == gift:
-			body.dropoff()
+		if body.inventory == gift:
 			gift = 4
+			body.dropoff()
+			sprite.hide()
 
 
 func _on_DeliveryBox_body_exited(body):
 	if body is Player:
-		if body.invetory == gift:
+		if body.inventory == gift:
 			gift = randi() % 3
+			sprite.show()
+
