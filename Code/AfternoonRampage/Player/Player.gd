@@ -12,16 +12,23 @@ onready var  sprite: AnimatedSprite = $AnimatedSprite
 var invetory: int = 4
 #Functions
 func _physics_process(delta):
-	# Getting Input
-	input_vector = Vector2(Input.get_action_strength("right") - Input.get_action_strength("left"), Input.get_action_strength("down") - Input.get_action_strength("up")).normalized()
-	# Movement
-	if input_vector != Vector2.ZERO:
-		velocity = velocity.move_toward(input_vector * speed, speed * acceleration * delta) 
-	else:
-		velocity = velocity.move_toward(Vector2.ZERO,speed * deceleration * delta)
-	velocity = move_and_slide(velocity)
-	sprite.frame = invetory
+    # Getting Input
+    input_vector = Vector2(Input.get_action_strength("right") - Input.get_action_strength("left"), Input.get_action_strength("down") - Input.get_action_strength("up")).normalized()
+    # Movement
+    if input_vector != Vector2.ZERO:
+        $AnimationTree.get("parameters/playback").travel("Walk")
+        move_and_slide(input_vector * speed)
+        $AnimationTree.set("parameters/Idle/blend_position", input_vector)
+        $AnimationTree.set("parameters/Walk/blend_position", input_vector)
+        
+        velocity.move_toward(input_vector * speed, speed * acceleration * delta) 
+        
+    else:
+        $AnimationTree.get("parameters/playback").travel("Idle")
+        velocity = velocity.move_toward(Vector2.ZERO,speed * deceleration * delta)
+        velocity = move_and_slide(velocity)
+        sprite.frame = invetory
 func pickup(gift):
-	invetory = gift
+    invetory = gift
 func dropoff():
-	invetory = 4
+    invetory = 4
