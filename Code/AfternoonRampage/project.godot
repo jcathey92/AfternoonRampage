@@ -9,7 +9,12 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Node2D",
+"base": "Area2D",
+"class": "DeliveryBox",
+"language": "GDScript",
+"path": "res://DeliveryBox/DeliveryBox.gd"
+}, {
+"base": "Area2D",
 "class": "Gift",
 "language": "GDScript",
 "path": "res://Gift/Gift.gd"
@@ -18,10 +23,17 @@ _global_script_classes=[ {
 "class": "Obstacle",
 "language": "GDScript",
 "path": "res://Obstacle/Obstacle.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Player",
+"language": "GDScript",
+"path": "res://Player/Player.gd"
 } ]
 _global_script_class_icons={
+"DeliveryBox": "",
 "Gift": "",
-"Obstacle": ""
+"Obstacle": "",
+"Player": ""
 }
 
 [application]

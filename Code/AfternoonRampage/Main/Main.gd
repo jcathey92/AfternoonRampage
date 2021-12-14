@@ -22,6 +22,8 @@ extends Node
 const PLAYER_PS: PackedScene = preload("res://Player/Player.tscn")
 const GIFT_PS: PackedScene = preload("res://Gift/Gift.tscn")
 
+func _ready():
+	randomize()
 
 func TestPrint(message: String):
 	print(message)
