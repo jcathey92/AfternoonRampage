@@ -9,10 +9,20 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Node2D",
+"class": "Cat",
+"language": "GDScript",
+"path": "res://Cat/Cat.gd"
+}, {
 "base": "Area2D",
 "class": "DeliveryBox",
 "language": "GDScript",
 "path": "res://DeliveryBox/DeliveryBox.gd"
+}, {
+"base": "Node2D",
+"class": "Dog",
+"language": "GDScript",
+"path": "res://Dog/Dog.gd"
 }, {
 "base": "Area2D",
 "class": "Gift",
@@ -30,7 +40,9 @@ _global_script_classes=[ {
 "path": "res://Player/Player.gd"
 } ]
 _global_script_class_icons={
+"Cat": "",
 "DeliveryBox": "",
+"Dog": "",
 "Gift": "",
 "Obstacle": "",
 "Player": ""
